@@ -12,7 +12,7 @@ import ProgressBar from 'react-customizable-progressbar'
 
 function useForcast([lat, long]) {
 
-  let query = `http://api.weatherapi.com/v1/forecast.json?key=a4d768eae1cb48cca3523003212102&q=${lat},${long}&days=7`
+  let query = `https://api.weatherapi.com/v1/forecast.json?key=a4d768eae1cb48cca3523003212102&q=${lat},${long}&days=7`
   let { data, error } = useSWR(query, (url) => fetch(url).then((res) => res.json()))
 
   return {

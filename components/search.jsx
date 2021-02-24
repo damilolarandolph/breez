@@ -11,7 +11,7 @@ export function useSearch(query) {
         query = "l"
     }
     let qString = encodeURIComponent(query)
-    let url = `http://api.weatherapi.com/v1/search.json?key=a4d768eae1cb48cca3523003212102&q=${qString}`
+    let url = `https://api.weatherapi.com/v1/search.json?key=a4d768eae1cb48cca3523003212102&q=${qString}`
     const { data, error } = useSWR(url, fetcher)
     let getProp = (index, prop) => data[index][prop]
 
